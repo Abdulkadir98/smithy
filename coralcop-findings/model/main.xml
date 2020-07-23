@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  This is just a template. Not a real model for a rel service.
+-->
+<definition assembly="com.amazon.first.example" version="1.0">
+
+  <service name="TestService">
+    <operation target="DoSomething" />
+  </service>
+
+  <operation name="DoSomething">
+    <input target="Input" />
+  </operation>
+
+  <structure name="Input">
+    <member name="memberWithNoValidation" target="memberWithNoValidation" />
+  </structure>
+  <string name="memberWithNoValidation" />
+
+</definition>

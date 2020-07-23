@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Resources:
+   githubEventGatewayDeploymentStageprod:
+    Properties:
+      DeploymentId:
+        Ref: githubEventGatewayDeployment
+      MethodSettings:
+        - DataTraceEnabled: true
+          HttpMethod: '*'
+          LoggingLevel: INFO
+          ResourcePath: /*
+      RestApiId:
+        Ref: githubEventGateway
+      StageName: prod
+    Type: AWS::ApiGateway::Stage
